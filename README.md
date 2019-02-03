@@ -18,7 +18,9 @@ Getting Started
 
 Currently the easiest way to get going _and start playing around_ is to create an instance of HelloKafka and make use of the `runserver.sh` shell script i.e. `docker build . -t hellokafka && docker run --name hellokafka -it kafka /bin/bash` (so overriding the CMD of the Dockerfile) and once you're in the container `./runserver.sh`. 
 
-Since the Dockerfile specifies the command `./runserver` to be executed by default it suffices to execute `docker run --name kafka -it kafka` in place of the latter, so `docker build . -t kafka && docker run --name kafka -it kafka`. If Kafka stops the container will be exited.
+Since the Dockerfile specifies the command `./runserver` to be executed by default it suffices to execute `docker run --name hellokafka -it hellokafka` in place of the latter, so `docker build . -t hellokafka && docker run --name hellokafka -it hellokafka`. 
+
+With this in mind, if Kafka stops the `runserver.sh` script will terminate and the container will be exited.
 
 # Current and Future Work
 
