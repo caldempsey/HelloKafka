@@ -5,7 +5,7 @@ if [ ! -d "kafka_configuration" ]; then
     echo "Configuration directory not located, terminating."
     exit 1
 fi
-# Create a Zookeeper data directory.
-mkdir data && mkdir data/zookeeper
+# Create a Zookeeper data directory and Kafka data directory.
+mkdir data && mkdir data/zookeeper && mkdir data/kafka
 # Replace all files within kafka_configuration with the new configuration.
 cp -r -f kafka_configuration/. config/

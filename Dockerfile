@@ -22,7 +22,7 @@ COPY ./kafka_cleanup.sh .
 RUN chmod +x ./kafka_cleanup.sh
 RUN ./kafka_cleanup.sh
 RUN rm kafka_cleanup.sh
-# Update PATH with Kafka executables. We have
+# Update PATH with Kafka executables. 
 ENV PATH "/etc/kafka/bin:${PATH}"
 # Copy a README for confused others.
 COPY KAFKA_README.md HELPME.md
