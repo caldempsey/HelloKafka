@@ -4,7 +4,7 @@
 What am I?
 --- 
 
-I am a learning repository responsible for containing Docker and Docker Compose Kafka instances.
+I am a repository for providing Kafka instances through Docker and Docker Compose.
 
 What is inside me?
 ---
