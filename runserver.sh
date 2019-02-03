@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "A script to execute a Kafka server in the foreground with the
 minimally known configuration."

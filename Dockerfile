@@ -29,5 +29,8 @@ COPY ./runserver.sh .
 RUN chmod +x ./runserver.sh
 # Copy a README for confused others.
 COPY KAFKA_README.md HELPME.md
-# Expose port.
+# Expose Zookeeper (not sure if this is necessary).
 EXPOSE 2181
+# Expose bootstrap servers.
+EXPOSE 9092
+CMD ./runserver.sh
