@@ -24,6 +24,9 @@ RUN ./kafka_cleanup.sh
 RUN rm kafka_cleanup.sh
 # Update PATH with Kafka executables. 
 ENV PATH "/etc/kafka/bin:${PATH}"
+# Copy runserver script (use this if implementing ).
+COPY ./runserver.sh . 
+RUN chmod +x ./runserver.sh
 # Copy a README for confused others.
 COPY KAFKA_README.md HELPME.md
 # Expose port.
