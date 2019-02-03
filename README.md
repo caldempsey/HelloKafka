@@ -1,7 +1,15 @@
 # HelloKafka
 
 
-Hello Kafka is a learning repository responsible for containing Docker and Docker compose. It comes bundled with configuration for an introductory Kafka setup (no ensemble as of yet, but soon), as well as some hints, tips, notes, and guidelines as part of the organised documentation. Use me when you need Kafka, fast! Currently it only runs a minimal possible implementation, but this will be updated as and when I need more functionality for my servers.
+What am I?
+--- 
+
+I am a learning repository responsible for containing Docker and Docker Compose Kafka instances.
+
+What is inside me?
+---
+
+Currently I come bundled with configuration for a introductory Kafka setup (no ensemble as of yet), as well as some hints, tips, notes, and guidelines as part of the organised documentation. Use me when you need Kafka, fast! Currently I only run a minimal possible implementation, but this will be updated as and when my master needs more functionality for his development servers.
 
 As a default, Kafka stores its logs in data/kafka and Zookeeper stores its data in data/zookeeper. We use the built in (development) zookeeper (for now).
 
