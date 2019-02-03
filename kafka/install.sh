@@ -11,9 +11,11 @@ if [[ -z "$url" ]]; then
 	exit 1
 fi
 # Otherwise pull the repository.
-echo "Downloading Kafka tar from $url and saving to /tmp/ as kafka_2.11-2.1.0.tgz"
+echo "Downloading Kafka tar from $url and saving as kafka_2.11-2.1.0.tgz. If this hangs try re-running the script (will grab a new source)."
 wget "${url}" -O "/etc/kafka/kafka_2.11-2.1.0.tgz"
 # Install Kafka to /kafka (by stripping the trailing underscore)
 tar -xzf kafka_2.11-2.1.0.tgz --strip 1
 # Cleanup 
+echo "Extraction complete, cleaning up binaries."
 rm kafka_2.11-2.1.0.tgz
+echo "Complete."

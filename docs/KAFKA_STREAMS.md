@@ -1,4 +1,4 @@
-# Building an Application
+# Building an Application In Kafka Streams
 
 A Quick Primer to Kafka Streams 
 ---
