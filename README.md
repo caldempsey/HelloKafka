@@ -18,4 +18,6 @@ The architecture of this Kafka streams application has the following componenets
 - Kafka streaming applications, responsible for using the brokers in the Kafka streaming API to transform data. 
 - Sinks, exposed transformed data, where it is not necessarily the case that all data transformations are exposed.
 
+# Reasoning
 
+Naming conventions for configuration and deployment shells scripts have been chosen to keep everything tidily together when viewing files from a-z (no scrolling).
