@@ -26,10 +26,10 @@ RUN rm cleanup.sh
 # Update PATH with Kafka executables. 
 ENV PATH "/etc/kafka/bin:${PATH}"
 # Copy runserver script (use this if implementing ).
-COPY ./runserver.sh . 
+COPY ./kafka/runserver.sh . 
 RUN chmod +x ./runserver.sh
 # Copy a README for confused others.
-COPY kafka/README.md README.md
+COPY kafka/README.md .
 # Expose Zookeeper (not sure if this is necessary).
 EXPOSE 2181
 # Expose bootstrap servers.

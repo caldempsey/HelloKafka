@@ -22,7 +22,9 @@ The Dockerfile specifies the command `./runserver` to be executed by default, so
 
 To break into the container or create an instance of HelloKafka and make use of the `runserver.sh` shell script you may want to consider syntax similar to `docker build . -t hellokafka && docker run --name hellokafka -it kafka /bin/bash`. The difference here is specification of `/bin/bash` in place of the latter. This overrides the CMD specified by the Dockerfile. Once you're in the container `./runserver.sh` at your leisure. 
 
-With this in mind, if Kafka stops the `runserver.sh` script will terminate and the container will be exited (which is de-facto behaviour of Docker instances).
+With this in mind, if Kafka stops the `runserver.sh` script will terminate and the container will be exited (which is de-facto behaviour of Docker instances). 
+
+It is important to note that since the setup does not yet make use of any volumes and currently spawns only one instance, topics can only have a replication factor of 1 (you can't have a replication factor greater than the number of available brokers) and will not be persisted across container exits.
 
 # Current and Future Work
 
@@ -41,3 +43,5 @@ Things to Improve
 - Add a test application which runs before the main execution script `runserver.sh`?
 
 - Cleanup dockerfile (lots of needless copy syntax which can be reduced).
+
+- Clustering.
