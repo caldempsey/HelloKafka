@@ -18,7 +18,7 @@ Getting Started
 
 You should probably know a thing or two about Docker before using this build, but if you don't never fear. What's important is you know the basics of Kafka and have a clean Docker installation.
 
-The Dockerfile specifies the command `./runserver` to be executed by default, so it is sufficient to execute `docker build . -t hellokafka && docker run --name hellokafka -it hellokafka`. Straight from the source this command is the fastest way to get up and running.
+The Dockerfile specifies the command `./runserver` to be executed by default, so it is sufficient to execute `docker build . -t hellokafka && docker run --name hellokafka -it hellokafka`. Straight from the project source this is the fastest way to get up and running (see Docker documentation for details on what each of these commands do).
 
 To break into the container or create an instance of HelloKafka and make use of the `runserver.sh` shell script you may want to consider syntax similar to `docker build . -t hellokafka && docker run --name hellokafka -it kafka /bin/bash`. The difference here is specification of `/bin/bash` in place of the latter. This overrides the CMD specified by the Dockerfile. Once you're in the container `./runserver.sh` at your leisure. 
 
