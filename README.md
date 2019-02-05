@@ -4,7 +4,7 @@
 What am I?
 --- 
 
-I am a repository for bootstrapping Kafka instances through Docker and Docker Compose.
+I am a repository for bootstrapping Kafka instances through Docker and Docker Compose with sensible playground defaults.
 
 What do I do?
 ---
