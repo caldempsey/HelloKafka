@@ -5,8 +5,8 @@ set -e
 # Dependencies: jq
 
 # Create a variable representing the response of whether the target package can be found, the JSON key will contain the meaningful URL of the target package as a truthy response (which we assign). 
-echo "Downloading kafka 2.1.1-2.1.0"
-url=$(curl --stderr /dev/null "https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.0/kafka_2.11-2.1.0.tgz&as_json=1" | jq -r '"\(.preferred)\(.path_info)"')
+echo "Downloading kafka 2.1.2-2.2.0"
+url=$(curl --stderr /dev/null "https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka_2.12-2.2.0&as_json=1" | jq -r '"\(.preferred)\(.path_info)"')
 # If the target package cannot be found, terminate the script.
 if [[ -z "$url" ]]; then
 	echo "Unable to determine mirror for downloading Kafka, the service may be down"
