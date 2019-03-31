@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 # Dependencies: jq
 
 # Create a variable representing the response of whether the target package can be found, the JSON key will contain the meaningful URL of the target package as a truthy response (which we assign). 
@@ -8,7 +10,7 @@ url=$(curl --stderr /dev/null "https://www.apache.org/dyn/closer.cgi?path=/kafka
 # If the target package cannot be found, terminate the script.
 if [[ -z "$url" ]]; then
 	echo "Unable to determine mirror for downloading Kafka, the service may be down"
-	exit 1
+	exit -1
 fi
 # Otherwise pull the repository.
 echo "Downloading Kafka tar from $url and saving as kafka_2.11-2.1.0.tgz. If this hangs try re-running the script (will grab a new source)."
